@@ -1,13 +1,4 @@
-// ============================================================
-//  tb_top.sv  ?  Testbench Top Module
-//  Instantiates: clock/reset, spi_if, spi_master, spi_slave
-//  Populates config_db and calls run_test()
-//
-//  Run commands (QuestaSim):
-//    vsim ... +UVM_TESTNAME=spi_random_test
-//    vsim ... +UVM_TESTNAME=spi_mode_walk_test
-//    vsim ... +UVM_TESTNAME=spi_corner_test
-// ============================================================
+
 `timescale 1ns/1ps
 
 import uvm_pkg::*;
@@ -83,12 +74,12 @@ module tb;
     end
 
     // ----------------------------------------------------------
-    //  Simulation timeout safety net (10 µs)
+    //  Simulation timeout safety net (10 Âµs)
     // ----------------------------------------------------------
     initial begin
         #10_000_000;
         `uvm_fatal("SIM_TIMEOUT",
-            "Simulation exceeded 10 µs ? check for hung transactions")
+            "Simulation exceeded 10 Âµs ? check for hung transactions")
     end
 
     // ----------------------------------------------------------
