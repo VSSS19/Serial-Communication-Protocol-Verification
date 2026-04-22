@@ -1,18 +1,4 @@
-// ============================================================
-//  spi_uvm_pkg.sv
-//  UVM 1.1d compatible ? QuestaSim 10.7c
-//
-//  FIX SUMMARY vs previous version:
-//    1. All class fields declared BEFORE uvm_object_utils_begin
-//       block (UVM-1.1d macro parser requires this)
-//    2. 'logic' replaced with 'bit' / 'byte' / 'bit[7:0]'
-//       (uvm_field_int works on 2-state types in 1.1d)
-//    3. UVM_NOPACK removed (not needed, caused warnings in 1.1d)
-//    4. foreach with two loop vars replaced with nested for loops
-//       (QuestaSim 10.7c SV parser limitation)
-//    5. Fixed array declaration syntax for corner seq
-//    6. cast from int to logic replaced with bit cast
-// ============================================================
+
 package spi_uvm_pkg;
 
     import uvm_pkg::*;
